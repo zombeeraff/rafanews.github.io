@@ -1,8 +1,7 @@
-import Image from "next/image";
+"use client";
 
-export const metadata = {
-  title: "Gallery — Rafa",
-};
+import Image from "next/image";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 // Replace these with your actual photos.
 // Drop high-res images into /public/photos/ and reference them here.
@@ -16,12 +15,14 @@ const photos = [
 ];
 
 export default function Gallery() {
+  const { t } = useLanguage();
+
   return (
     <section className="max-w-6xl mx-auto px-6 py-20">
-      <h1 className="text-3xl sm:text-4xl font-bold tracking-tight mb-4">Gallery</h1>
-      <p className="text-gray-600 mb-12">
-        A collection of moments I&apos;ve captured. Click any photo to view it larger.
-      </p>
+      <h1 className="text-3xl sm:text-4xl font-bold tracking-tight mb-4">
+        {t.gallery.title}
+      </h1>
+      <p className="text-gray-600 mb-12">{t.gallery.subtitle}</p>
 
       {/* Responsive masonry-style grid */}
       <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">

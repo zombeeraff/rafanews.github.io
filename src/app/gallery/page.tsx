@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 export const metadata = {
-  title: "Gallery — Raf",
+  title: "Gallery — Rafa",
 };
 
 // Replace these with your actual photos.

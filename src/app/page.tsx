@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <section className="max-w-3xl mx-auto px-6 py-24 text-center">
       <h1 className="text-5xl font-bold tracking-tight mb-6">
-        Hey, I&apos;m Raf
+        Hey, I&apos;m Rafa
       </h1>
       <p className="text-xl text-gray-600 mb-10 leading-relaxed">
         Welcome to my corner of the internet. I share a bit about who I am

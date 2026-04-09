@@ -4,7 +4,7 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Raf — Personal Website",
+  title: "Rafa — Personal Website",
   description: "Welcome to my corner of the internet. About me, my work, and my photography.",
 };
 

@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Blog — Raf",
+  title: "Blog — Rafa",
 };
 
 export default function Blog() {

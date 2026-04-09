@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "About — Raf",
+  title: "About — Rafa",
 };
 
 export default function About() {
@@ -8,7 +8,7 @@ export default function About() {
       <h1>About Me</h1>
 
       <p>
-        Hi! I&apos;m Raf. This is where you can tell your story — what you do,
+        Hi! I&apos;m Rafa. This is where you can tell your story — what you do,
         what drives you, and what you&apos;re excited about. Write in your own
         voice; keep it personal.
       </p>

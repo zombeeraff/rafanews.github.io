@@ -38,6 +38,14 @@ export const translations = {
     },
     blog: {
       title: "Blog",
+      categories: {
+        all: "All",
+        musicChats: "Music Chats",
+        travel: "Travel",
+        tech: "Tech",
+        reads: "Reads",
+      },
+      empty: "No posts yet.",
     },
     germany: {
       title: "Germany",
@@ -80,6 +88,14 @@ export const translations = {
     },
     blog: {
       title: "Blog",
+      categories: {
+        all: "Todo",
+        musicChats: "Conversaciones Musicales",
+        travel: "Viajes",
+        tech: "Tecnología",
+        reads: "Lecturas",
+      },
+      empty: "Sin publicaciones aún.",
     },
     germany: {
       title: "Alemania",

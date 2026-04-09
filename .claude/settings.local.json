@@ -5,7 +5,17 @@
       "Bash(npm run:*)",
       "Bash(git -C \"/Users/rafaelaguirre/Documents/Claude/Projects/Personal Website\" init)",
       "Bash(git -C \"/Users/rafaelaguirre/Documents/Claude/Projects/Personal Website\" remote add origin https://github.com/zombeeraff/rafanews.github.io.git)",
-      "Bash(git -C \"/Users/rafaelaguirre/Documents/Claude/Projects/Personal Website\" add .)"
+      "Bash(git -C \"/Users/rafaelaguirre/Documents/Claude/Projects/Personal Website\" add .)",
+      "Bash(git add:*)",
+      "Bash(git commit -m ':*)",
+      "Bash(git push:*)",
+      "Bash(git fetch:*)",
+      "Bash(git merge:*)",
+      "Bash(npx next:*)",
+      "Bash(./node_modules/.bin/next build:*)",
+      "Bash(sips -g pixelWidth -g pixelHeight /Users/rafaelaguirre/rafanews_private/public/photos/DSC01576.JPG)",
+      "Bash(git config:*)",
+      "Bash(sips -g pixelWidth -g pixelHeight /Users/rafaelaguirre/rafanews_private/public/photos/TheAndromedaStrain.jpg)"
     ]
   }
 }

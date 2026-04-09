@@ -1,30 +1,81 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
+import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-const posts = [
-  { href: "/blog/germany", title: "Germany", date: "April 8, 2026" },
+type Category = "musicChats" | "travel" | "tech" | "reads";
+
+const posts: { href: string; title: string; date: string; category: Category; thumbnail?: string; thumbnailClass?: string }[] = [
+  { href: "/blog/andromeda-strain", title: "The Andromeda Strain", date: "April 9, 2026", category: "reads", thumbnail: "/photos/TheAndromedaStrain.jpg", thumbnailClass: "w-16" },
+  { href: "/blog/berlin", title: "Berlin", date: "January 21, 2026", category: "travel", thumbnail: "https://vtupbkrc2ny02vy6.public.blob.vercel-storage.com/berlin.png", thumbnailClass: "w-28" },
 ];
+
+const categories: Category[] = ["musicChats", "travel", "tech", "reads"];
 
 export default function Blog() {
   const { t } = useLanguage();
+  const [active, setActive] = useState<Category | null>(null);
+
+  const filtered = active ? posts.filter((p) => p.category === active) : posts;
 
   return (
     <article className="max-w-2xl mx-auto px-6 py-12 sm:py-20 prose prose-gray prose-lg">
       <h1>{t.blog.title}</h1>
-      <ul className="not-prose space-y-4 mt-8">
-        {posts.map((post) => (
-          <li key={post.href} className="flex items-baseline justify-between gap-4">
-            <Link
-              href={post.href}
-              className="text-gray-900 hover:text-gray-600 font-medium transition-colors"
-            >
-              {post.title}
-            </Link>
-            <span className="text-sm text-gray-400 shrink-0">{post.date}</span>
-          </li>
+
+      {/* Category filters */}
+      <div className="not-prose flex flex-wrap gap-2 mt-6">
+        {categories.map((cat) => (
+          <button
+            key={cat}
+            onClick={() => setActive(active === cat ? null : cat)}
+            className={`px-3 py-1 rounded-full text-sm font-medium border transition-colors ${
+              active === cat
+                ? "bg-gray-900 text-white border-gray-900"
+                : "bg-white text-gray-500 border-gray-200 hover:border-gray-400 hover:text-gray-900"
+            }`}
+          >
+            {t.blog.categories[cat]}
+          </button>
         ))}
+      </div>
+
+      {/* Post list */}
+      <ul className="not-prose space-y-4 mt-8">
+        {filtered.length === 0 ? (
+          <li className="text-gray-400 text-sm">{t.blog.empty}</li>
+        ) : (
+          filtered.map((post) => (
+            <li key={post.href}>
+              <Link href={post.href} className="flex items-center gap-4 group">
+                {post.thumbnail && (
+                  <div className={`shrink-0 ${post.thumbnailClass ?? "w-20"} rounded overflow-hidden shadow-sm`}>
+                    <Image
+                      src={post.thumbnail}
+                      alt={post.title}
+                      width={619}
+                      height={1000}
+                      className="w-full h-auto"
+                      quality={90}
+                    />
+                  </div>
+                )}
+                <div className="flex-1 flex items-baseline justify-between gap-4">
+                  <div className="flex items-baseline gap-3">
+                    <span className="text-gray-900 group-hover:text-gray-600 font-medium transition-colors">
+                      {post.title}
+                    </span>
+                    <span className="text-xs text-gray-400 border border-gray-200 rounded-full px-2 py-0.5">
+                      {t.blog.categories[post.category]}
+                    </span>
+                  </div>
+                  <span className="text-sm text-gray-400 shrink-0">{post.date}</span>
+                </div>
+              </Link>
+            </li>
+          ))
+        )}
       </ul>
     </article>
   );

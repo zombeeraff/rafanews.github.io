@@ -16,6 +16,11 @@ public/
   photos/        — High-res photo files for the gallery
 ```
 
+## Blog Thumbnail Sizes (on blog landing page)
+- **Reads** (book covers): `thumbnailClass: "w-16"`
+- **Travel**: set per post based on image composition
+- Use the `thumbnailClass` field on each post entry in `src/app/blog/page.tsx`
+
 ## Conventions
 - Always use the Next.js `<Image>` component for photos (never raw `<img>`)
 - Set `quality={90}` and proper `sizes` attribute on all gallery images

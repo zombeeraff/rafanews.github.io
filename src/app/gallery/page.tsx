@@ -1,21 +1,18 @@
 "use client";
 
 import Image from "next/image";
+import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 // Replace these with your actual photos.
 // Drop high-res images into /public/photos/ and reference them here.
 const photos = [
-  { src: "/photos/placeholder-1.jpg", alt: "Photo 1", width: 1200, height: 800 },
-  { src: "/photos/placeholder-2.jpg", alt: "Photo 2", width: 800, height: 1200 },
-  { src: "/photos/placeholder-3.jpg", alt: "Photo 3", width: 1200, height: 800 },
-  { src: "/photos/placeholder-4.jpg", alt: "Photo 4", width: 1200, height: 1200 },
-  { src: "/photos/placeholder-5.jpg", alt: "Photo 5", width: 800, height: 1200 },
-  { src: "/photos/placeholder-6.jpg", alt: "Photo 6", width: 1200, height: 800 },
+  { src: "/photos/DSC01576.JPG", alt: "DSC01576", width: 5472, height: 3648 },
 ];
 
 export default function Gallery() {
   const { t } = useLanguage();
+  const [selected, setSelected] = useState<number | null>(null);
 
   return (
     <section className="max-w-6xl mx-auto px-6 py-20">
@@ -27,7 +24,11 @@ export default function Gallery() {
       {/* Responsive masonry-style grid */}
       <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
         {photos.map((photo, index) => (
-          <div key={index} className="break-inside-avoid overflow-hidden rounded-lg">
+          <div
+            key={index}
+            className="break-inside-avoid overflow-hidden rounded-lg cursor-pointer"
+            onClick={() => setSelected(index)}
+          >
             <Image
               src={photo.src}
               alt={photo.alt}
@@ -40,6 +41,26 @@ export default function Gallery() {
           </div>
         ))}
       </div>
+
+      {/* Lightbox */}
+      {selected !== null && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
+          onClick={() => setSelected(null)}
+        >
+          <div className="relative max-w-5xl w-full max-h-[90vh] flex items-center justify-center">
+            <Image
+              src={photos[selected].src}
+              alt={photos[selected].alt}
+              width={photos[selected].width}
+              height={photos[selected].height}
+              className="object-contain max-h-[90vh] w-auto rounded-lg"
+              sizes="100vw"
+              quality={90}
+            />
+          </div>
+        </div>
+      )}
     </section>
   );
 }

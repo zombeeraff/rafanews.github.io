@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(npm run:*)",
+      "Bash(git -C \"/Users/rafaelaguirre/Documents/Claude/Projects/Personal Website\" init)",
+      "Bash(git -C \"/Users/rafaelaguirre/Documents/Claude/Projects/Personal Website\" remote add origin https://github.com/zombeeraff/rafanews.github.io.git)",
+      "Bash(git -C \"/Users/rafaelaguirre/Documents/Claude/Projects/Personal Website\" add .)"
+    ]
+  }
+}

@@ -26,7 +26,7 @@ export default function WhiteNights() {
         </div>
         <div>
           <h1 className="text-2xl font-bold tracking-tight text-gray-900">White Nights</h1>
-          <p className="text-gray-400 text-sm mt-1">April 9, 2026 · {t.blog.categories.reads}</p>
+          <p className="text-gray-400 text-sm mt-1">January 6, 2026 · {t.blog.categories.reads}</p>
         </div>
       </div>
 

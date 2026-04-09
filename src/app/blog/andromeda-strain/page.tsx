@@ -26,7 +26,7 @@ export default function AndromedaStrain() {
         </div>
         <div>
           <h1 className="text-2xl font-bold tracking-tight text-gray-900">The Andromeda Strain</h1>
-          <p className="text-gray-400 text-sm mt-1">April 9, 2026 · {t.blog.categories.reads}</p>
+          <p className="text-gray-400 text-sm mt-1">February 15, 2026 · {t.blog.categories.reads}</p>
         </div>
       </div>
 

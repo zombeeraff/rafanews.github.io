@@ -18,7 +18,7 @@ const photos = [
 export default function Gallery() {
   return (
     <section className="max-w-6xl mx-auto px-6 py-20">
-      <h1 className="text-4xl font-bold tracking-tight mb-4">Gallery</h1>
+      <h1 className="text-3xl sm:text-4xl font-bold tracking-tight mb-4">Gallery</h1>
       <p className="text-gray-600 mb-12">
         A collection of moments I&apos;ve captured. Click any photo to view it larger.
       </p>

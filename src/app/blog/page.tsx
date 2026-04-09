@@ -10,7 +10,7 @@ const posts = [
 
 export default function Blog() {
   return (
-    <article className="max-w-2xl mx-auto px-6 py-20 prose prose-gray prose-lg">
+    <article className="max-w-2xl mx-auto px-6 py-12 sm:py-20 prose prose-gray prose-lg">
       <h1>Blog</h1>
       <ul className="not-prose space-y-4 mt-8">
         {posts.map((post) => (

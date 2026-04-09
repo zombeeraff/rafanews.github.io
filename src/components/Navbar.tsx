@@ -20,7 +20,7 @@ export function Navbar() {
           Rafa
         </Link>
 
-        <ul className="flex gap-8">
+        <ul className="flex gap-4 sm:gap-8">
           {links.map((link) => (
             <li key={link.href}>
               <Link

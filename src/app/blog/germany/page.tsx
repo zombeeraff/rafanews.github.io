@@ -4,7 +4,7 @@ export const metadata = {
 
 export default function Germany() {
   return (
-    <article className="max-w-2xl mx-auto px-6 py-20 prose prose-gray prose-lg">
+    <article className="max-w-2xl mx-auto px-6 py-12 sm:py-20 prose prose-gray prose-lg">
       <h1>Germany</h1>
 
       <div className="not-prose my-8">

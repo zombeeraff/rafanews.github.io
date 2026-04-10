@@ -8,7 +8,7 @@ export function Footer() {
   return (
     <footer className="border-t border-gray-100 py-8">
       <div className="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-400">
-        <span>&copy; {new Date().getFullYear()} Rafa. All rights reserved.</span>
+        <span>&copy; {new Date().getFullYear()} Rafa 🚀. All rights reserved.</span>
         <div className="flex items-center gap-2">
           <span className="text-lg leading-none" aria-hidden="true">
             {language === "en" ? "🇺🇸" : "🇲🇽"}

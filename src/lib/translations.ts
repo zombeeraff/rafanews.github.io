@@ -11,8 +11,8 @@ export const translations = {
     home: {
       heading: "Hi, I'm Rafa",
       subheading:
-        "Welcome to my corner of the internet. I share a bit about who I am and the photos I've taken along the way.",
-      aboutBtn: "About Me",
+        "Welcome to my cyberspace! I share a bit about who I am and the photos I've taken along the way.",
+      aboutBtn: "Blog",
       galleryBtn: "Photo Gallery",
     },
     about: {
@@ -44,6 +44,7 @@ export const translations = {
         travel: "Travel",
         tech: "Tech",
         reads: "Reads",
+        space: "Space",
       },
       empty: "No posts yet.",
     },
@@ -62,7 +63,7 @@ export const translations = {
       heading: "Hola, soy Rafa",
       subheading:
         "Bienvenido a mi rincón del internet. Comparto un poco sobre quién soy y las fotos que he tomado en el camino.",
-      aboutBtn: "Sobre Mí",
+      aboutBtn: "Blog",
       galleryBtn: "Galería de Fotos",
     },
     about: {
@@ -94,6 +95,7 @@ export const translations = {
         travel: "Viajes",
         tech: "Tecnología",
         reads: "Lecturas",
+        space: "Espacio",
       },
       empty: "Sin publicaciones aún.",
     },

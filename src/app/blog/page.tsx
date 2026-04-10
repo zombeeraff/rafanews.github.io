@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-type Category = "musicChats" | "travel" | "tech" | "reads";
+type Category = "musicChats" | "travel" | "tech" | "reads" | "space";
 
 const posts: { href: string; title: string; date: string; category: Category; thumbnail?: string; thumbnailClass?: string }[] = [
   { href: "/blog/andromeda-strain", title: "The Andromeda Strain", date: "February 15, 2026", category: "reads", thumbnail: "/photos/TheAndromedaStrain.jpg", thumbnailClass: "w-16" },
@@ -13,7 +13,7 @@ const posts: { href: string; title: string; date: string; category: Category; th
   { href: "/blog/white-nights", title: "White Nights", date: "January 6, 2026", category: "reads", thumbnail: "https://vtupbkrc2ny02vy6.public.blob.vercel-storage.com/whitenights.jpg", thumbnailClass: "w-16" },
 ];
 
-const categories: Category[] = ["musicChats", "travel", "tech", "reads"];
+const categories: Category[] = ["musicChats", "travel", "tech", "reads", "space"];
 
 export default function Blog() {
   const { t } = useLanguage();

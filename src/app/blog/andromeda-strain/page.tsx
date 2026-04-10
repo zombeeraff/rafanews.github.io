@@ -24,15 +24,13 @@ export default function AndromedaStrain() {
             quality={90}
           />
         </div>
-        <div>
-          <h1 className="text-2xl font-bold tracking-tight text-gray-900">The Andromeda Strain</h1>
-          <p className="text-gray-400 text-sm mt-1">February 15, 2026 · {t.blog.categories.reads}</p>
+        <div className="prose prose-gray prose-lg">
+          <h1 className="text-2xl font-bold tracking-tight text-gray-900 mt-0">The Andromeda Strain</h1>
+          <p className="text-gray-400 text-sm mt-1 mb-4">February 15, 2026 · {t.blog.categories.reads}</p>
+          <p>I started reading this book as I had read several of Crichton&apos;s other books such as NEXT and overall enjoyed them. The book was a bit hard to get into at first. You also need to have a really good memory or a character map because there are many characters to keep up with. I would say it&apos;s kinda crazy that a book like this would be written in 1968…but looking back at the history it directly coincides with the Apollo moon landings. I wish I would have gotten the chance to read this book back then, before the universe of knowledge made things inside the book too believable and less mysterious. The resolution of the book was not what I expected, maybe some would say underwhelming.</p>
+          <p>It was an entertaining story and a relatively easy read. Def will read some more Crichton in the future.</p>
         </div>
       </div>
-
-      <p>I started reading this book as I had read several of Crichton&apos;s other books such as NEXT and overall enjoyed them. The book was a bit hard to get into at first. You also need to have a really good memory or a character map because there are many characters to keep up with. I would say it&apos;s kinda crazy that a book like this would be written in 1968…but looking back at the history it directly coincides with the Apollo moon landings. I wish I would have gotten the chance to read this book back then, before the universe of knowledge made things inside the book too believable and less mysterious. The resolution of the book was not what I expected, maybe some would say underwhelming.</p>
-
-      <p>It was an entertaining story and a relatively easy read. Def will read some more Crichton in the future.</p>
 
     </article>
   );

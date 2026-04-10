@@ -16,7 +16,7 @@ export default function Home() {
       </p>
       <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
         <Link
-          href="/about"
+          href="/blog"
           className="px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-700 transition-colors"
         >
           {t.home.aboutBtn}

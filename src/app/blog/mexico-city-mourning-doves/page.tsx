@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-const THUMBNAIL = "https://vtupbkrc2ny02vy6.public.blob.vercel-storage.com/IMG_4949.heic";
+const THUMBNAIL = "https://vtupbkrc2ny02vy6.public.blob.vercel-storage.com/IMG_4949.jpg";
 
 export default function MexicoCityMourningDoves() {
   const { t } = useLanguage();
@@ -20,8 +20,8 @@ export default function MexicoCityMourningDoves() {
           <Image
             src={THUMBNAIL}
             alt="Mexico City / Mourning Doves thumbnail"
-            width={800}
-            height={600}
+            width={750}
+            height={1000}
             className="w-full h-auto"
             quality={90}
           />

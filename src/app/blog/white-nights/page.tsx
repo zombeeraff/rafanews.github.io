@@ -25,12 +25,12 @@ export default function WhiteNights() {
           />
         </div>
         <div>
-          <h1 className="text-2xl font-bold tracking-tight text-gray-900">White Nights</h1>
-          <p className="text-gray-400 text-sm mt-1">January 6, 2026 · {t.blog.categories.reads}</p>
+          <h1 className="text-2xl font-bold tracking-tight text-gray-900 mt-0">White Nights</h1>
+          <p className="text-gray-400 text-sm mt-1 mb-0">January 6, 2026 · {t.blog.categories.reads}</p>
         </div>
       </div>
 
-      {/* Write your post content here */}
+      <p>White Nights was not an easy book to read. I found myself re-reading passages over and over again to try to understand the mindset of the Dreamer (narrator). I reckon it has to do with the fact that it is a work originally in Russian and they must have a speaking cadence much different than what I am used to in English and Spanish. As I progressed through the story though, I gathered that this cadence that I am speaking of is really there to show the intensity of the moodswings that dreamer and Nastenka live through in the span of a very short time. Not a whole lot happens in the book. Really the thought I am left with is how significant even the smallest interactions can be when one feels as though life is happening for everyone but themselves. I still feel like I did not fully grasp what Dostoevsky wanted to share and I intend to read this book again in Spanish to see what else I can gather from that translation.</p>
 
     </article>
   );

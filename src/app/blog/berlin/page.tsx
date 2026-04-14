@@ -28,7 +28,7 @@ export default function Berlin() {
           />
         </div>
         <div>
-          <h1 className="text-2xl font-bold tracking-tight text-gray-900">Berlin</h1>
+          <h1 className="text-2xl font-bold tracking-tight text-gray-900">{language === "es" ? "Berlín" : "Berlin"}</h1>
           <p className="text-gray-400 text-sm mt-1">{formatDate("2026-01-21", language)} · {t.blog.categories.travel}</p>
         </div>
       </div>

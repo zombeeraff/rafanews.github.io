@@ -9,7 +9,7 @@ import { formatDate } from "@/lib/formatDate";
 type Category = "musicChats" | "travel" | "tech" | "reads" | "space";
 
 const posts: { href: string; title: string; titleEs?: string; date: string; categories: Category[]; thumbnail?: string; thumbnailClass?: string }[] = [
-  { href: "/blog/mexico-city-mourning-doves", title: "Mourning Dove to Mexico City", date: "2026-04-10", categories: ["travel"], thumbnail: "https://vtupbkrc2ny02vy6.public.blob.vercel-storage.com/IMG_49jhyvjyh49.jpg", thumbnailClass: "w-28" },
+  { href: "/blog/mexico-city-mourning-doves", title: "Mourning Dove to Mexico City", titleEs: "Paloma de Luto a la Ciudad de México", date: "2026-04-10", categories: ["travel"], thumbnail: "https://vtupbkrc2ny02vy6.public.blob.vercel-storage.com/IMG_49jhyvjyh49.jpg", thumbnailClass: "w-28" },
   { href: "/blog/andromeda-strain", title: "The Andromeda Strain", titleEs: "La amenaza de Andrómeda", date: "2026-02-15", categories: ["reads", "space"], thumbnail: "/photos/TheAndromedaStrain.jpg", thumbnailClass: "w-16" },
   { href: "/blog/berlin", title: "Berlin", titleEs: "Berlín", date: "2026-01-21", categories: ["travel"], thumbnail: "https://vtupbkrc2ny02vy6.public.blob.vercel-storage.com/berlin.png", thumbnailClass: "w-28" },
   { href: "/blog/white-nights", title: "White Nights", titleEs: "Noches Blancas", date: "2026-01-06", categories: ["reads"], thumbnail: "https://vtupbkrc2ny02vy6.public.blob.vercel-storage.com/whitenights.jpg", thumbnailClass: "w-16" },

@@ -40,7 +40,7 @@ export const translations = {
       title: "Blog",
       categories: {
         all: "All",
-        musicChats: "Music Chats",
+        musicChats: "Music",
         travel: "Travel",
         tech: "Tech",
         reads: "Reads",

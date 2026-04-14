@@ -28,7 +28,7 @@ export default function MexicoCityMourningDoves() {
           />
         </div>
         <div>
-          <h1 className="text-2xl font-bold tracking-tight text-gray-900 mt-0">Mourning Dove to Mexico City</h1>
+          <h1 className="text-2xl font-bold tracking-tight text-gray-900 mt-0">{language === "es" ? "Paloma de Luto a la Ciudad de México" : "Mourning Dove to Mexico City"}</h1>
           <p className="text-gray-400 text-sm mt-1 mb-0">{formatDate("2026-04-10", language)} · {t.blog.categories.travel}</p>
         </div>
       </div>

@@ -3,9 +3,10 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { formatDate } from "@/lib/formatDate";
 
 export default function AndromedaStrain() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   return (
     <article className="max-w-2xl mx-auto px-6 py-12 sm:py-20 prose prose-gray prose-lg">
@@ -26,7 +27,9 @@ export default function AndromedaStrain() {
         </div>
         <div>
           <h1 className="text-2xl font-bold tracking-tight text-gray-900 mt-0">The Andromeda Strain</h1>
-          <p className="text-gray-400 text-sm mt-1 mb-0">February 15, 2026 · {t.blog.categories.reads}</p>
+          <p className="text-gray-400 text-sm mt-1 mb-0">{formatDate("2026-02-15", language)} · {t.blog.categories.reads}</p>
+          <p className="text-gray-500 text-sm mt-2 mb-0">Michael Crichton · 1969</p>
+          <p className="text-gray-500 text-sm mt-1 mb-0">United States</p>
         </div>
       </div>
 

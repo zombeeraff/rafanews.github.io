@@ -3,11 +3,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { formatDate } from "@/lib/formatDate";
 
 const THUMBNAIL = "https://vtupbkrc2ny02vy6.public.blob.vercel-storage.com/berlin.png";
 
 export default function Berlin() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   return (
     <article className="max-w-2xl mx-auto px-6 py-12 sm:py-20 prose prose-gray prose-lg">
@@ -28,7 +29,7 @@ export default function Berlin() {
         </div>
         <div>
           <h1 className="text-2xl font-bold tracking-tight text-gray-900">Berlin</h1>
-          <p className="text-gray-400 text-sm mt-1">January 21, 2026 · {t.blog.categories.travel}</p>
+          <p className="text-gray-400 text-sm mt-1">{formatDate("2026-01-21", language)} · {t.blog.categories.travel}</p>
         </div>
       </div>
 

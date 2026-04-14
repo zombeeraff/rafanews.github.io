@@ -4,23 +4,24 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { formatDate } from "@/lib/formatDate";
 
 type Category = "musicChats" | "travel" | "tech" | "reads" | "space";
 
-const posts: { href: string; title: string; date: string; category: Category; thumbnail?: string; thumbnailClass?: string }[] = [
-  { href: "/blog/mexico-city-mourning-doves", title: "Mexico City / Mourning Doves", date: "April 10, 2026", category: "travel", thumbnail: "https://vtupbkrc2ny02vy6.public.blob.vercel-storage.com/IMG_4949.jpg", thumbnailClass: "w-28" },
-  { href: "/blog/andromeda-strain", title: "The Andromeda Strain", date: "February 15, 2026", category: "reads", thumbnail: "/photos/TheAndromedaStrain.jpg", thumbnailClass: "w-16" },
-  { href: "/blog/berlin", title: "Berlin", date: "January 21, 2026", category: "travel", thumbnail: "https://vtupbkrc2ny02vy6.public.blob.vercel-storage.com/berlin.png", thumbnailClass: "w-28" },
-  { href: "/blog/white-nights", title: "White Nights", date: "January 6, 2026", category: "reads", thumbnail: "https://vtupbkrc2ny02vy6.public.blob.vercel-storage.com/whitenights.jpg", thumbnailClass: "w-16" },
+const posts: { href: string; title: string; titleEs?: string; date: string; categories: Category[]; thumbnail?: string; thumbnailClass?: string }[] = [
+  { href: "/blog/mexico-city-mourning-doves", title: "Mourning Dove to Mexico City", date: "2026-04-10", categories: ["travel"], thumbnail: "https://vtupbkrc2ny02vy6.public.blob.vercel-storage.com/IMG_49jhyvjyh49.jpg", thumbnailClass: "w-28" },
+  { href: "/blog/andromeda-strain", title: "The Andromeda Strain", titleEs: "La amenaza de Andrómeda", date: "2026-02-15", categories: ["reads", "space"], thumbnail: "/photos/TheAndromedaStrain.jpg", thumbnailClass: "w-16" },
+  { href: "/blog/berlin", title: "Berlin", titleEs: "Berlín", date: "2026-01-21", categories: ["travel"], thumbnail: "https://vtupbkrc2ny02vy6.public.blob.vercel-storage.com/berlin.png", thumbnailClass: "w-28" },
+  { href: "/blog/white-nights", title: "White Nights", titleEs: "Noches Blancas", date: "2026-01-06", categories: ["reads"], thumbnail: "https://vtupbkrc2ny02vy6.public.blob.vercel-storage.com/whitenights.jpg", thumbnailClass: "w-16" },
 ];
 
 const categories: Category[] = ["musicChats", "travel", "tech", "reads", "space"];
 
 export default function Blog() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [active, setActive] = useState<Category | null>(null);
 
-  const filtered = active ? posts.filter((p) => p.category === active) : posts;
+  const filtered = active ? posts.filter((p) => p.categories.includes(active)) : posts;
 
   return (
     <article className="max-w-2xl mx-auto px-6 py-12 sm:py-20 prose prose-gray prose-lg">
@@ -66,13 +67,15 @@ export default function Blog() {
                 <div className="flex-1 flex items-baseline justify-between gap-4">
                   <div className="flex items-baseline gap-3">
                     <span className="text-gray-900 group-hover:text-gray-600 font-medium transition-colors">
-                      {post.title}
+                      {language === "es" && post.titleEs ? post.titleEs : post.title}
                     </span>
-                    <span className="text-xs text-gray-400 border border-gray-200 rounded-full px-2 py-0.5">
-                      {t.blog.categories[post.category]}
-                    </span>
+                    {post.categories.map((cat) => (
+                      <span key={cat} className="text-xs text-gray-400 border border-gray-200 rounded-full px-2 py-0.5">
+                        {t.blog.categories[cat]}
+                      </span>
+                    ))}
                   </div>
-                  <span className="text-sm text-gray-400 shrink-0">{post.date}</span>
+                  <span className="text-sm text-gray-400 shrink-0">{formatDate(post.date, language)}</span>
                 </div>
               </Link>
             </li>

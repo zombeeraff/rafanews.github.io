@@ -3,9 +3,10 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { formatDate } from "@/lib/formatDate";
 
 export default function WhiteNights() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   return (
     <article className="max-w-2xl mx-auto px-6 py-12 sm:py-20 prose prose-gray prose-lg">
@@ -26,7 +27,9 @@ export default function WhiteNights() {
         </div>
         <div>
           <h1 className="text-2xl font-bold tracking-tight text-gray-900 mt-0">White Nights</h1>
-          <p className="text-gray-400 text-sm mt-1 mb-0">January 6, 2026 · {t.blog.categories.reads}</p>
+          <p className="text-gray-400 text-sm mt-1 mb-0">{formatDate("2026-01-06", language)} · {t.blog.categories.reads}</p>
+          <p className="text-gray-500 text-sm mt-2 mb-0">Fyodor Dostoevsky · 1848</p>
+          <p className="text-gray-500 text-sm mt-1 mb-0">Russia</p>
         </div>
       </div>
 

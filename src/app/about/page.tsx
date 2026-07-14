@@ -12,7 +12,7 @@ export default function About() {
 
       <p>{t.about.intro}</p>
 
-      <p>
+      <div className="flex items-center gap-6 not-prose">
         <a
           href="https://boxd.it/jOKqr"
           target="_blank"
@@ -24,30 +24,27 @@ export default function About() {
             alt="Letterboxd"
             width={28}
             height={28}
-            className="rounded-lg not-prose"
+            className="rounded-lg"
           />
           <span>{t.about.letterboxd}</span>
         </a>
-      </p>
 
-      <p>
-        <a href="https://www.discogs.com/user/raguirre/collection" target="_blank" rel="noopener noreferrer">
-          {t.about.discogs}
+        <a
+          href="https://www.discogs.com/user/raguirre/collection"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 no-underline hover:opacity-80"
+        >
+          <Image
+            src="/photos/discogs.png"
+            alt="Discogs"
+            width={28}
+            height={28}
+            className="rounded-lg"
+          />
+          <span>{t.about.discogs}</span>
         </a>
-      </p>
-
-      <h2>{t.about.whatIDoTitle}</h2>
-      <p>{t.about.whatIDoBody}</p>
-
-      <h2>{t.about.photographyTitle}</h2>
-      <p>
-        {t.about.photographyBody}{" "}
-        <a href="/gallery">{t.about.galleryLink}</a>{" "}
-        {t.about.photographyBody2}
-      </p>
-
-      <h2>{t.about.contactTitle}</h2>
-      <p>{t.about.contactBody}</p>
+      </div>
 
     </article>
   );

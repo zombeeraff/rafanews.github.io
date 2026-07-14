@@ -18,8 +18,7 @@ export const translations = {
     },
     about: {
       title: "About Me",
-      intro:
-        "Hi! I'm Rafa. This is where you can tell your story — what you do, what drives you, and what you're excited about. Write in your own voice; keep it personal.",
+      intro: "Hi! I'm Rafa. Below are some links to some of my profiles.",
       whatIDoTitle: "What I Do",
       whatIDoBody:
         "Describe your work, your passions, your day-to-day. This section uses the Tailwind Typography plugin, so any Markdown-style content you write here will look great automatically.",
@@ -77,8 +76,7 @@ export const translations = {
     },
     about: {
       title: "Sobre Mí",
-      intro:
-        "¡Hola! Soy Rafa. Aquí puedes contar tu historia — qué haces, qué te impulsa y qué te emociona. Escribe con tu propia voz; que sea personal.",
+      intro: "¡Hola! Soy Rafa. Aquí hay algunos links a mis perfiles.",
       whatIDoTitle: "Qué Hago",
       whatIDoBody:
         "Describe tu trabajo, tus pasiones, tu día a día. Esta sección usa el plugin de tipografía de Tailwind, así que cualquier contenido que escribas aquí se verá genial automáticamente.",

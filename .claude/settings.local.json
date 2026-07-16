@@ -55,7 +55,11 @@
       "Bash(cp /Users/rafaelaguirre/rafanews_private/public/umbrella-logo.svg /Users/rafaelaguirre/rafanews_private/src/app/icon.svg)",
       "Bash(python3 -c ' *)",
       "Bash(git fetch *)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(git push *)",
+      "Bash(git merge *)",
+      "Bash(sips -g pixelWidth -g pixelHeight \"public/photos/German flag.webp\")",
+      "Bash(npx tsc *)"
     ]
   }
 }

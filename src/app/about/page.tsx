@@ -4,11 +4,24 @@ import Image from "next/image";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function About() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   return (
     <article className="max-w-2xl mx-auto px-6 py-12 sm:py-20 prose prose-gray prose-lg">
       <h1>{t.about.title}</h1>
+
+      {language === "es" ? (
+        <>
+          {/* Spanish version pending */}
+        </>
+      ) : (
+        <p>
+          Hi I&apos;m Rafa!!
+          <br />
+          <br />
+          This is my personal website where I share my hobbies and interest. If you are looking for a more polished business version that is focused on my career and projects - GO HERE!!
+        </p>
+      )}
 
       <p>{t.about.intro}</p>
 
@@ -44,6 +57,17 @@ export default function About() {
           />
           <span>{t.about.discogs}</span>
         </a>
+
+        <div className="inline-flex items-center gap-2">
+          <Image
+            src="/photos/instagram-icon.png"
+            alt="Instagram"
+            width={28}
+            height={28}
+            className="rounded-lg"
+          />
+          <span>{t.about.instagram}</span>
+        </div>
       </div>
 
     </article>

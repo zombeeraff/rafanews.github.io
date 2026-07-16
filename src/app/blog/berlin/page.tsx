@@ -33,7 +33,13 @@ export default function Berlin() {
         </div>
       </div>
 
-      {/* Write your post content here */}
+      {language === "es" ? (
+        <>
+          {/* Write your Spanish post content here */}
+        </>
+      ) : (
+        <p>My first impression of Berlin were that it was a city that had the climate that I was looking for. It was quite cold during the days that I was there but not enough to have snow. Seeing an old European city lit up at night with Christmas lights was also somewhat of a yearning come to life for me. Or a dream come true some would say</p>
+      )}
 
     </article>
   );

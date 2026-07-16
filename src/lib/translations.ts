@@ -18,7 +18,7 @@ export const translations = {
     },
     about: {
       title: "About Me",
-      intro: "Hi! I'm Rafa. Below are some links to some of my profiles.",
+      intro: "Below are some links to some of my profiles.",
       whatIDoTitle: "What I Do",
       whatIDoBody:
         "Describe your work, your passions, your day-to-day. This section uses the Tailwind Typography plugin, so any Markdown-style content you write here will look great automatically.",
@@ -33,11 +33,13 @@ export const translations = {
       linksTitle: "Links",
       letterboxd: "Letterboxd",
       discogs: "Discogs",
+      instagram: "Instagram",
     },
     gallery: {
       title: "Gallery",
       subtitle:
         "A collection of moments I've captured. Click any photo to view it larger.",
+      countries: "Countries",
     },
     blog: {
       title: "Blog",
@@ -91,11 +93,13 @@ export const translations = {
       linksTitle: "Links",
       letterboxd: "Letterboxd",
       discogs: "Discogs",
+      instagram: "Instagram",
     },
     gallery: {
       title: "Galería",
       subtitle:
         "Una colección de momentos que he capturado. Haz clic en cualquier foto para verla más grande.",
+      countries: "Países",
     },
     blog: {
       title: "Blog",
@@ -110,8 +114,8 @@ export const translations = {
       empty: "Sin publicaciones aún.",
       edition: "Edición",
       disclaimer: "Escrito con 0% de IA +",
-      noteLine1: "I aim for this to be the real voice in my writing. I write my posts in English and Spanish separately.",
-      noteLine2: "They will generally share the same ideas and reflections, but communicated…differently",
+      noteLine1: "Mi intención en este blog es expresarme con mi \"voz\" de autor auténtica. Escribo el contenido de esta página en inglés y español por separado. Generalmente expreso las mismas ideas y reflexiones en ambos idiomas, pero quizá sean comunicadas de manera distinta. Lo que quiero decir es que no son traducciones literales.",
+      noteLine2: "",
     },
     germany: {
       title: "Alemania",

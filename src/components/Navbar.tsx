@@ -22,7 +22,6 @@ export function Navbar() {
     { href: "/about", label: t.nav.about },
     { href: "/gallery", label: t.nav.gallery },
     { href: "/blog", label: t.nav.blog },
-    ...(session ? [{ href: "/fifa26", label: t.nav.fifa26 }] : []),
   ];
 
   useEffect(() => {

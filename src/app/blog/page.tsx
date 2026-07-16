@@ -27,7 +27,7 @@ export default function Blog() {
     <article className="max-w-2xl mx-auto px-6 py-12 sm:py-20 prose prose-gray prose-lg">
       <h1>{t.blog.title}</h1>
       <p className="not-prose text-sm text-gray-900 mt-1">{t.blog.noteLine1}</p>
-      <p className="not-prose text-sm text-gray-900 mt-0">{t.blog.noteLine2}</p>
+      {t.blog.noteLine2 && <p className="not-prose text-sm text-gray-900 mt-0">{t.blog.noteLine2}</p>}
       <p className="not-prose text-sm text-gray-400 mt-6 text-center">- {t.blog.disclaimer}</p>
 
       {/* Category filters */}

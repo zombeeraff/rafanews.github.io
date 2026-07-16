@@ -68,6 +68,9 @@ In your OAuth 2.0 Client ID, **Authorized redirect URIs** must include:
 - `http://localhost:3000/api/auth/callback/google` (dev)
 - `https://www.rafa.news/api/auth/callback/google` (prod)
 
+## Hidden Pages
+- `/fifa26` (FIFA 26 Panini tracker) — the nav link was removed from `src/components/Navbar.tsx`, but the route, page, and data (`src/app/fifa26/page.tsx`, `src/content/fifa26-tracker.html`) are still intact. It remains reachable at `/fifa26` for signed-in allowed users (auth is unaffected), just not linked anywhere. Re-add the nav entry (`{ href: "/fifa26", label: t.nav.fifa26 }`) in `Navbar.tsx` when it's ready to be public again.
+
 ## Commands
 - `npm run dev` — Start dev server
 - `npm run build` — Production build
